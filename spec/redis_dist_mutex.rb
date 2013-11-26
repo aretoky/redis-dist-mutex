@@ -1,8 +1,9 @@
 # -*- coding:utf-8 -*-
-require './lib/redis-dist-mutex.rb'
+require 'spec_helper'
+require 'redis-dist-mutex'
 
 def redis
-  Redis.new db: 15
+  Redis.new db:15
 end
 
 def create_thread(i, mutex)
@@ -13,8 +14,6 @@ def create_thread(i, mutex)
     end
   end
 end
-
-p Redis.constants
 
 describe Redis::DistMutex do
   context 'no expire' do
