@@ -1,26 +1,20 @@
 # Redis::DistMutex
 
 Distributed mutex using Redis.
-Conpatible with ruby Mutex.
+
+Compatible with ruby Mutex.
 Enable to set expire to the lockfile. If set, act as like a setInterval in JavaScript.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'redis-dist-mutex'
+    gem 'redis-dist-mutex', :git => 'https://github.com/vasilyjp/redis-dist-mutex.git'
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install redis-dist-mutex
 
 ## Usage
 
-### initialize
+### setup
 
 ```ruby
 Redis::DistMutex.redis = Redis.new
@@ -45,7 +39,7 @@ ensure
 end
 ```
 
-### Set expire and autorelase
+### Lock with expire (Set expire and autorelase)
 
 ```ruby
 mutex = Redis::DistMutex.new :app_name, expire: 1, autorelease: false
