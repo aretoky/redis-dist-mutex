@@ -1,7 +1,7 @@
 # Redis::DistMutex
 
 Distributed mutex using Redis.
-Conpatible with redis Mutex.
+Conpatible with ruby Mutex.
 Enable to set expire to the lockfile. If set, act as like a setInterval in JavaScript.
 
 ## Installation
