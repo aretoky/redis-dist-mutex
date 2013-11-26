@@ -35,7 +35,7 @@ mutex.synchronize { puts "act with lock" }
 
 ### lock/unlock
 
-```
+```ruby
 mutex = Redis::DistMutex.new :app_name
 begin
   mutex.lock
@@ -47,7 +47,7 @@ end
 
 ### Set expire and autorelase
 
-```
+```ruby
 mutex = Redis::DistMutex.new :app_name, expire: 1, autorelease: false
 mutex.synchronize { puts "unlock after 1 sec." }
 ```
