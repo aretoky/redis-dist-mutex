@@ -101,5 +101,3 @@ class Redis
 
   end
 end
-
-p Redis::DistMutex
